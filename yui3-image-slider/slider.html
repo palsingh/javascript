@@ -1,0 +1,21 @@
+<script>
+YUI().use('image-slider', function(Y){
+Y.one('#HomeBanner').plug(Y.Plugin.ImageSlider, {
+                'leftButton'	:	'.leftArrowBanner',			// Left button node
+                'rightButton'	:	'.rightArrowBanner',		// Right button node
+                'direction' 	:	'right',					// Direction if sliding
+                'duration'	:	1,							// animation time
+                'slideTime'	:	6000						// slide image after this time
+            });
+});
+</script>
+
+<!--Banner Start-->
+                    <div id="HomeBanner" class="margin-left-10 overflow-hidden p-relative">
+                      <img src="/images/motor/images/savings1.jpg" height="215" width="201" class="cursor" onclick="window.open('http://www.berkshireinsurance.com/')" />
+                      <img src="/images/motor/images/savings3.png" height="215" width="201" class="cursor" onclick="window.open('http://www.berkshireinsurance.com/')" style="display:none" />
+                      <!--<img src="/images/motor/images/savings2.jpg" height="215" width="201" class="cursor" onclick="window.open('http://www.berkshireinsurance.com/')" style="display:none" />-->
+                      <div class="leftArrowBanner"></div>
+                      <div class="rightArrowBanner"></div>
+                   </div>
+                    <!--Banner End-->
