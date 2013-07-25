@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script src="build/yui/yui-min.js"></script>
+		<script src="js/datatype-date-format-min.js"></script>
+		<script src="js/page-bicalendar.js"></script>
+		<script src="js/page-calendar-plugin.js"></script>		
+	</head>
+	<body class="yui3-skin-sam">
+		<input type="text" value="" id="myCal" name="myCal" tabindex="1" />
+		<script>
+			YUI().use('node' , 'page-bicalendar' , 'page-calendar-plugin' , function(Y){
+				var today = new Date(),
+				pastDate = new Date(2012, 0, 15);
+				Y.one('#myCal').plug(Y.Plugin.Calendar,{
+                    'maximumDate' : today,
+                    'minimumDate' : pastDate,
+                    'date'        : today,
+                    'align'       : 'left'
+                });
+			});
+		</script>
+	</body>
+</html>
